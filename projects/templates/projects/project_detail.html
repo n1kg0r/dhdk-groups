@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Project Detail</title>
+</head>
+<body>
+<p> Name: {{ project.name }} | <a href="{% url 'projects:project_update' project.id %}">Update</a> |
+    <a href="{% url 'projects:project_delete' project.id %}">Delete</a>
+</p>
+<p> Project Status: {{ project.get_status_display }} </p>
+<p> <a href="{% url 'projects:project_list' %}">View All projects</a> |
+    <a href="{% url 'projects:project_create'%}">New project</a>
+</p>
+</body>
+</html>
